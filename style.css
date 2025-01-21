@@ -31,43 +31,57 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0 40px;
   color: #332f2f;
   box-sizing: border-box;
   text-align: center;
   position: relative;
-  top: 0;
 }
 
 .name {
   font-size: 20px;
   font-weight: bold;
+  margin: 0;
 }
 
-.navbar ul {
+.nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #332f2f;
+  align-items: center;
+  margin: 0;
   font-size: 20px;
   font-weight: bold;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #332f2f;
   transition: color 0.3s ease;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
   color: #ffbb33;
   transition: color 0.15s ease;
+}
+
+.navbar-separator {
+  opacity: 15%;
+  align-items: center;
+  width: calc(100% + 40px);
+  height: 1px;
+  background-color: #332f2f;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  position: relative;
+  margin-left: -20px;
 }
 
 .text-content {
   color: #332f2f;
   font-size: 30px;
   text-align: left;
+  margin: 0;
   padding: 40px;
 }
 
