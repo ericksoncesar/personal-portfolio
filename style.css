@@ -79,7 +79,7 @@ html {
 
 .text-content {
   color: #332f2f;
-  font-size: 30px;
+  font-size: 34px;
   text-align: left;
   margin: 0;
   padding: 40px;
@@ -87,4 +87,25 @@ html {
 
 span {
   color: #ffbb33;
+}
+
+.social-icons {
+  display: flex;
+  text-align: left;
+  margin: 0;
+  padding: 40px;
+  gap: 15px;
+  padding-left: 40px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #332f2f;
+  font-size: 32px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f58d42;
+  transform: scale(1.2);
 }
