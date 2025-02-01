@@ -3,17 +3,18 @@ html body {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   margin: 0;
+  width: 100%;
 }
 
 /* Navbar */
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 50px;
+  padding: 0 3.25rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   background-color: #ffffff;
@@ -36,25 +37,13 @@ nav a {
   font-size: 1.25rem;
   font-weight: bold;
   color: #332f2f;
-  padding: 10px;
+  padding: 0.5rem;
   text-decoration: none;
 }
 
 nav a:hover {
   color: #f7931e;
   transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.footer {
-  bottom: 0;
-  left: 50%;
-  text-align: center;
-  font-size: 14px;
-  color: #332f2f;
-  position: absolute;
-  transform: translateX(-50%);
-  padding-left: 10px;
-  padding: 1rem 0;
 }
 
 .nav-links a {
@@ -66,16 +55,30 @@ nav a:hover {
 .nav-links a:hover {
   color: #f7931e;
   transition: color 0.15s ease;
+  flex-grow: 1;
+}
+
+/* Footer */
+
+footer {
+  position: relative;
+  padding-left: 0.75rem;
+  left: 0;
+  background-color: none;
+  text-align: left;
+  box-sizing: border-box;
+  font-size: 0.85rem;
+  bottom: 0;
 }
 
 /* Home */
 .text-content {
   color: #332f2f;
-  font-size: 28px;
+  font-size: 1.75rem;
   text-align: left;
-  margin-right: 505px;
-  padding-left: 40px;
-  padding-top: 120px;
+  margin-right: 32.5rem;
+  padding-left: 3.25rem;
+  padding-top: 7.5rem;
 }
 
 span {
@@ -83,11 +86,11 @@ span {
 }
 
 .profile-pic {
-  width: 24rem;
-  height: 24rem;
+  width: 26rem;
+  height: 26rem;
   overflow: hidden;
-  position: fixed;
-  right: 100px;
+  position: absolute;
+  right: 3.25rem;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
@@ -100,22 +103,22 @@ span {
   font-size: 24px;
   padding: 10px 35px;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.35rem;
   cursor: pointer;
 }
 
 .social-icons {
-  display: inline-block;
+  display: flex;
   position: relative;
   bottom: 0px;
   left: 0;
   text-align: left;
   color: #332f2f;
-  position: absolute;
   margin: 0;
-  gap: 20px;
+  gap: 1.25rem;
+  padding-top: 5rem;
   margin-right: 505px;
-  padding-left: 40px;
+  padding-left: 3.25rem;
 }
 
 .social-icons a {
@@ -153,13 +156,13 @@ span {
 
 .aboutme-paragraph {
   color: #332f2f;
-  font-size: 18px;
+  font-size: 1.25rem;
   text-align: center;
   margin: 0;
-  margin-top: -60px;
+  margin-top: 0px;
   padding-left: 130px;
   padding-right: 130px;
-  padding-bottom: 130px;
+  padding-bottom: 10rem;
 }
 
 /* Skills */
@@ -189,7 +192,7 @@ span {
   text-align: center;
   flex-wrap: wrap;
   margin: 0;
-  margin-top: -10px;
+  margin-top: 0px;
   padding-left: 100px;
   padding-right: 100px;
   gap: 25px;
@@ -205,13 +208,14 @@ span {
   padding-left: 100px;
   padding-right: 100px;
   gap: 25px;
+  padding-bottom: 15rem;
 }
 
 .skill-icons i,
 .skill-icons-2 i {
   text-decoration: none;
   color: #332f2f;
-  font-size: 62px;
+  font-size: 4rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -219,17 +223,6 @@ span {
 .skill-icons-2 i:hover {
   color: #f7931e;
   transform: scale(1.2);
-}
-
-.skills-paragraph {
-  color: #332f2f;
-  font-size: 20px;
-  text-align: center;
-  margin: 0;
-  padding-left: 100px;
-  display: flex;
-  margin-top: 20px;
-  padding-right: 100px;
 }
 
 @media (min-width: 600px) {
@@ -299,20 +292,6 @@ span {
     padding-left: 10px;
     margin-top: 5px;
   }
-
-  /* Home */
-  /* 
-  .profile-pic {
-    width: 14rem;
-    height: 14rem;
-    overflow: hidden;
-    position: fixed;
-    top: 50%;
-    left: 12.5%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  } */
 
   .text-content {
     font-size: 20px;
