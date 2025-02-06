@@ -5,7 +5,6 @@ html body {
   flex-direction: column;
   margin: 0;
   width: 100%;
-
   min-height: 100vh;
 }
 
@@ -25,7 +24,6 @@ html body {
   align-items: center;
   z-index: 100;
   box-sizing: border-box;
-  /* border-bottom: 0.25px solid rgba(204, 204, 204, 0.5); */
 }
 
 .name {
@@ -60,27 +58,26 @@ nav a:hover {
   flex-grow: 1;
 }
 
-/* Footer */
+/* Section */
 
-footer {
-  position: relative;
-  padding: 0 0.75rem;
-  left: 0;
-  background-color: none;
-  box-sizing: border-box;
-  font-size: 0.85rem;
-  bottom: 0;
+section {
+  padding-top: 5rem; 
+  padding-bottom: 5rem; 
+  scroll-margin-top: 5rem; 
+  /* border: red 2px solid; */
+}
+
+/* Home Page */
+
+.main-container {
   display: flex;
-  justify-content: flex-start;
-  align-items: left;
-  text-align: left;
+  flex-direction: column;
+  /* align-items: center;  */
+  height: 100vh; 
+  flex-grow: 2;
 }
 
-/* Home Section */
 
-.main-section {
-  background-color: rgb(255, 255, 255);
-}
 .text-content {
   color: #131111;
   font-size: 2.25rem;
@@ -94,19 +91,10 @@ span {
   color: #ff8800;
 }
 
-.profile-pic {
-  width: 23rem;
-  height: 23rem;
-  overflow: hidden;
-  position: absolute;
-  right: 3.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
 
 .contact-btn {
+  position: relative;
+
   background-color: #ff8800;
   color: #fff;
   font-size: 24px;
@@ -126,10 +114,36 @@ span {
   margin: 0;
   gap: 1.25rem;
   padding-top: 4.5rem;
-  padding-bottom: 8rem;
-  /* margin-right: 505px; */
+  /* padding-bottom: 4rem; */
   padding-left: 3.25rem;
+  justify-content: flex-start; 
+  padding-left: 3.25rem;
+  padding-top: 7.5rem;
 }
+
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center;  */
+  justify-content: flex-end; 
+  height: 100vh; 
+  margin-top: -450px;
+}
+
+.profile-pic {
+  /* display: flex;  */
+  /* align-items: right;  */
+  width: 23rem;
+  height: 23rem;
+  overflow: hidden;
+  /* position: relative; */
+  /* margin-right: 50px;  */
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-right: 3.25rem;
+}
+
 
 .social-icons a {
   text-decoration: none;
@@ -143,7 +157,7 @@ span {
   transform: scale(1.2);
 }
 
-/* About-Me Section */
+/* About Me Page */
 
 .aboutme-section {
   background-color: rgb(243, 243, 243);
@@ -154,17 +168,17 @@ span {
   font-size: 30px;
   text-align: center;
   margin: 0;
-  padding-top: 65px;
+  /* margin-top: 175px; */
 }
 
 .aboutme-underline {
-  width: 220px;
+  width: 310px;
   height: 2px;
   background-color: #ff8800;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 60px;
+  margin-top: 115px;
 }
 
 .aboutme-paragraph {
@@ -173,12 +187,12 @@ span {
   text-align: center;
   margin: 0;
   margin-top: 0px;
-  padding-left: 130px;
-  padding-right: 130px;
-  padding-bottom: 6rem;
+  padding-left: 190px;
+  padding-right: 190px;
+  /* padding-bottom: 10rem; */
 }
 
-/* Skills Section */
+/* Skills Page */
 
 .skills-heading {
   color: #131111;
@@ -220,7 +234,7 @@ span {
   padding-left: 100px;
   padding-right: 100px;
   gap: 25px;
-  padding-bottom: 15rem;
+  /* padding-bottom: 15rem; */
 }
 
 .skill-icons i,
@@ -237,7 +251,7 @@ span {
   transform: scale(1.2);
 }
 
-/* Projects Section */
+/* Projects Page */
 
 .projects-section {
   background-color: rgb(243, 243, 243);
@@ -258,7 +272,7 @@ span {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 130px;
+  margin-top: 70px;
 }
 
 .slider-title {
@@ -269,22 +283,49 @@ span {
 
 .container {
   display: flex;
+
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  
 }
 
-/* .slider-list, */
 .slider-item,
 .slider-link {
   width: 400px;
+  height: 425px;
   display: flexbox;
   background: #fff;
   padding: 1.25rem;
   border-radius: 0.75rem;
   text-decoration: none;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.slider-item:hover,
+.slider-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.slider-item:hover .button-right,
+.slider-link:hover .button-right {
+  background-color: #ff8800;
+  color: #fff;
+}
+
+
+.slider-list {
+  display: flex;
+  /* overflow: visible; */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  gap: 1.25rem;
+}
+
+
 
 .slider-list,
 .slider-item {
@@ -295,26 +336,42 @@ span {
 .slider-link,
 .slider-image {
   width: 100%;
-  /* aspect-ratio: 16 / 9; */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 10px;
 }
 
 .slider-list,
-/* .slider-link, */
+.slider-link,
 .slider-title {
-  color: rgb(0, 0, 0);
-  /* padding: 8px 16px; */
+  color: #131111;
+  padding: 8px 0px;
   font-size: 1.25rem;
   font-weight: 600;
-  margin: 16px 0 18px;
   /* background: #131111; */
 }
+
+
 
 .slider-description {
   font-weight: 400;
   font-size: 1rem;
 }
+
+ .button-right {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  border: 2px solid #131111;
+  cursor: pointer;
+  background: none;
+  transform: rotate(-45deg);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  color: #131111;
+  transition: 0.4s ease;
+
+}
+
 
 /* Designs Section */
 
@@ -323,7 +380,7 @@ span {
   font-size: 30px;
   text-align: center;
   margin: 0;
-  margin-top: 75px;
+  margin-top: 175px;
 }
 
 .designs-underline {
@@ -333,7 +390,7 @@ span {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 130px;
+  margin-top: 115px;
 }
 
 /* Contact Section */
@@ -341,6 +398,15 @@ span {
 .contact-section {
   background-color: rgb(243, 243, 243);
 }
+
+.contact-heading {
+  color: #131111;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  margin-top: 75px;
+}
+
 
 .contact-heading {
   color: #131111;
@@ -359,6 +425,23 @@ span {
   transform: translateX(-50%);
   margin-top: 115px;
 }
+
+/* Footer */
+
+footer {
+  position: relative;
+  padding: 0 0.75rem;
+  left: 0;
+  background-color: none;
+  box-sizing: border-box;
+  font-size: 0.85rem;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  text-align: left;
+}
+
 
 @media (min-width: 600px) {
   .sidebar {
