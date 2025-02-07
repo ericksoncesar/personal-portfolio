@@ -61,10 +61,26 @@ nav a:hover {
 /* Section */
 
 section {
-  padding-top: 5rem; 
-  padding-bottom: 5rem; 
   scroll-margin-top: 5rem; 
   /* border: red 2px solid; */
+}
+
+
+/* Theme Toggle */
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #131111;
+  transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  color: #ff8800;
+  transition: color 0.15s ease;
+  flex-grow: 1;
 }
 
 /* Home Page */
@@ -72,19 +88,18 @@ section {
 .main-container {
   display: flex;
   flex-direction: column;
-  /* align-items: center;  */
   height: 100vh; 
-  flex-grow: 2;
+  /* margin-bottom: -400px; */
+  /* border: red 2px solid; */
+
 }
 
 
 .text-content {
   color: #131111;
-  font-size: 2.25rem;
-  text-align: left;
-  margin-right: 32.5rem;
+  font-size: 2.75rem;
   padding-left: 3.25rem;
-  padding-top: 7.5rem;
+  padding-top: 5rem;
 }
 
 span {
@@ -93,12 +108,10 @@ span {
 
 
 .contact-btn {
-  position: relative;
-
   background-color: #ff8800;
   color: #fff;
   font-size: 24px;
-  padding: 10px 35px;
+  padding: .75rem 2.5rem;
   border: none;
   border-radius: 0.35rem;
   cursor: pointer;
@@ -106,49 +119,30 @@ span {
 
 .social-icons {
   display: flex;
-  position: relative;
-  bottom: 0px;
-  left: 0;
-  text-align: left;
   color: #131111;
-  margin: 0;
   gap: 1.25rem;
-  padding-top: 4.5rem;
-  /* padding-bottom: 4rem; */
-  padding-left: 3.25rem;
-  justify-content: flex-start; 
   padding-left: 3.25rem;
   padding-top: 7.5rem;
 }
 
-
+/* 
 .profile-container {
   display: flex;
-  flex-direction: row;
-  /* align-items: center;  */
-  justify-content: flex-end; 
-  height: 100vh; 
-  margin-top: -450px;
-}
-
-.profile-pic {
-  /* display: flex;  */
-  /* align-items: right;  */
-  width: 23rem;
-  height: 23rem;
-  overflow: hidden;
-  /* position: relative; */
-  /* margin-right: 50px;  */
-  border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  margin-right: 3.25rem;
-}
-
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh;  
+  margin-top: -40rem;
+  padding-right: 3.25rem;
+  padding-bottom: 55rem;
+position: relative;
+border: red 2px solid;
+} */
 
 .social-icons a {
   text-decoration: none;
   color: #131111;
-  font-size: 44px;
+  font-size: 3.25rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -156,6 +150,24 @@ span {
   color: #ff8800;
   transform: scale(1.2);
 }
+
+.profile-pic {
+  /* display: flex;  */
+/* justify-content: flex-end;  */
+  
+  width: 28rem;
+  height: 28rem;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+justify-content: flex-end;
+}
+
+
 
 /* About Me Page */
 
@@ -168,10 +180,9 @@ span {
   font-size: 30px;
   text-align: center;
   margin: 0;
-  /* margin-top: 175px; */
 }
 
-.aboutme-underline {
+/* .aboutme-underline {
   width: 310px;
   height: 2px;
   background-color: #ff8800;
@@ -179,7 +190,7 @@ span {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 115px;
-}
+} */
 
 .aboutme-paragraph {
   color: #131111;
@@ -187,9 +198,8 @@ span {
   text-align: center;
   margin: 0;
   margin-top: 0px;
-  padding-left: 190px;
-  padding-right: 190px;
-  /* padding-bottom: 10rem; */
+  padding: 0 31.25rem;
+  /* padding-bottom: 5rem; */
 }
 
 /* Skills Page */
@@ -199,10 +209,11 @@ span {
   font-size: 30px;
   text-align: center;
   margin: 0;
-  /* margin-top: 25px; */
+  /* padding-top: 10rem; */
+
 }
 
-.skills-underline {
+/* .skills-underline {
   width: 180px;
   height: 2px;
   background-color: #ff8800;
@@ -210,17 +221,17 @@ span {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 115px;
-}
+} */
 
 .skill-icons {
   display: flex;
   justify-content: center;
   text-align: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: 0;
   margin-top: 0px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 0 31.25rem;
+
   gap: 25px;
 }
 
@@ -231,10 +242,10 @@ span {
   flex-wrap: wrap;
   margin: 0;
   margin-top: 30px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 0 31.25rem;
+
   gap: 25px;
-  /* padding-bottom: 15rem; */
+  padding-bottom: 5rem;
 }
 
 .skill-icons i,
@@ -262,10 +273,10 @@ span {
   font-size: 30px;
   text-align: center;
   margin: 0;
-  margin-top: 75px;
+  /* margin-top: 75px; */
 }
 
-.projects-underline {
+/* .projects-underline {
   width: 270px;
   height: 2px;
   background-color: #ff8800;
@@ -273,7 +284,7 @@ span {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 70px;
-}
+} */
 
 .slider-title {
   margin: 0;
@@ -311,7 +322,7 @@ span {
 
 .slider-item:hover .button-right,
 .slider-link:hover .button-right {
-  background-color: #ff8800;
+  background-color: #131111;
   color: #fff;
 }
 
@@ -383,7 +394,7 @@ span {
   margin-top: 175px;
 }
 
-.designs-underline {
+/* .designs-underline {
   width: 270px;
   height: 2px;
   background-color: #ff8800;
@@ -391,7 +402,7 @@ span {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 115px;
-}
+} */
 
 /* Contact Section */
 
@@ -404,19 +415,13 @@ span {
   font-size: 30px;
   text-align: center;
   margin: 0;
-  margin-top: 75px;
+  /* margin-top: 75px; */
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
 }
 
-
-.contact-heading {
-  color: #131111;
-  font-size: 30px;
-  text-align: center;
-  margin: 0;
-  margin-top: 175px;
-}
-
-.contact-underline {
+/* .contact-underline {
   width: 270px;
   height: 2px;
   background-color: #ff8800;
@@ -424,7 +429,7 @@ span {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 115px;
-}
+} */
 
 /* Footer */
 
@@ -563,7 +568,7 @@ footer {
     flex-grow: 1;
   }
 
-  .aboutme-underline {
+  /* .aboutme-underline {
     width: 310px;
     height: 2px;
     background-color: #ff8800;
@@ -571,7 +576,7 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 115px;
-  }
+  } */
 
   .aboutme-paragraph {
     color: #131111;
@@ -595,7 +600,7 @@ footer {
     position: relative;
   }
 
-  .skills-underline {
+  /* .skills-underline {
     width: 180px;
     height: 2px;
     background-color: #ff8800;
@@ -603,7 +608,7 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 115px;
-  }
+  } */
 
   .skill-icons {
     display: flex;
