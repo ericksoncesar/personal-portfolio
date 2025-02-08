@@ -19,4 +19,4 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 ## Contact 📧
 
-Created by [Erickson Cesar](https://679dda16f3ac3847e1b76ad0--ericksoncesar.netlify.app/) - feel free to reach out!!
+Created by [Erickson Cesar](https://ericksoncesar.netlify.app/) - feel free to reach out!!
