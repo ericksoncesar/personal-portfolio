@@ -15,7 +15,7 @@ html body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 1.5rem;
+  padding: 1rem 1.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #ffffff;
@@ -26,11 +26,28 @@ html body {
   box-sizing: border-box;
 }
 
+.ec-logo {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.ec-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .name {
   font-size: 1.25rem;
   font-weight: bold;
   color: #131111;
   text-decoration: none;
+  margin-left: -68 rem;
 }
 
 nav a {
@@ -50,6 +67,8 @@ nav a:hover {
   text-decoration: none;
   color: #131111;
   transition: color 0.3s ease;
+  justify-content: flex-end;
+  display: flex;
 }
 
 .nav-links a:hover {
@@ -66,7 +85,6 @@ nav a:hover {
 
 section {
   scroll-margin-top: 4rem;
-  /* border: red 2px solid; */
 }
 
 /* Theme Toggle */
@@ -91,19 +109,51 @@ section {
 .main-container {
   display: flex;
   flex-direction: column;
-
-  /* border: red 2px solid; */
+  justify-content: center;
+  align-items: center;
 }
 
 .text-content {
   color: #131111;
-  font-size: 2.75rem;
-  padding-left: 1.5rem;
-  padding-top: 5rem;
+  font-size: 2.25rem;
+  /* padding-left: 1.5rem; */
+  padding-top: 2.5rem;
 }
 
 span {
   color: #ff8800;
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 2rem auto;
+  margin-top: -2rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
+.contact-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-btn {
@@ -120,24 +170,11 @@ span {
   display: flex;
   color: #131111;
   gap: 1.25rem;
-  padding-left: 1.5rem;
-  padding-top: 5rem;
-  padding-bottom: 0.5rem;
+  /* padding-top: 1rem; */
+  /* margin-left: 1.25rem; */
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
-
-/* 
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  height: 100vh;  
-  margin-top: -40rem;
-  padding-right: 3.25rem;
-  padding-bottom: 55rem;
-position: relative;
-border: red 2px solid;
-} */
 
 .social-icons a {
   text-decoration: none;
@@ -151,18 +188,6 @@ border: red 2px solid;
   transform: scale(1.2);
 }
 
-/* .profile-pic {
-
-  width: 28rem;
-  height: 28rem;
-  overflow: hidden;
-  border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  align-self: center;
-  display: flex;
-  height: 100vh; 
-  } */
-
 /* About Me Page */
 
 .aboutme-section {
@@ -175,16 +200,6 @@ border: red 2px solid;
   text-align: center;
   margin: 0;
 }
-
-/* .aboutme-underline {
-  width: 310px;
-  height: 2px;
-  background-color: #ff8800;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 115px;
-} */
 
 .aboutme-paragraph {
   color: #131111;
@@ -203,28 +218,15 @@ border: red 2px solid;
   font-size: 30px;
   text-align: center;
   margin: 0;
-  /* padding-top: 10rem; */
 }
-
-/* .skills-underline {
-  width: 180px;
-  height: 2px;
-  background-color: #ff8800;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 115px;
-} */
 
 .skill-icons {
   display: flex;
   justify-content: center;
   text-align: center;
-  /* flex-wrap: wrap; */
   margin: 0;
   margin-top: 0px;
   padding: 0 31.25rem;
-
   gap: 25px;
 }
 
@@ -236,7 +238,6 @@ border: red 2px solid;
   margin: 0;
   margin-top: 30px;
   padding: 0 31.25rem;
-
   gap: 25px;
   padding-bottom: 3rem;
 }
@@ -266,7 +267,7 @@ border: red 2px solid;
   font-size: 30px;
   text-align: center;
   margin: 0;
-  /* margin-top: 75px; */
+  margin-bottom: -100px;
 }
 
 .slider-title {
@@ -274,7 +275,6 @@ border: red 2px solid;
   padding: 0;
   box-sizing: border-box;
   text-align: center;
-  /* margin-top: -20px; */
 }
 
 .container {
@@ -283,18 +283,17 @@ border: red 2px solid;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  margin-bottom: -15rem;
+  margin-bottom: -25rem;
 }
 
 .slider-item,
 .slider-link {
-  width: 300px;
-  height: 400px;
+  width: 225px;
+  height: 310px;
   display: flexbox;
   flex-direction: column;
-
   background: #fff;
-  padding: 1.25rem;
+  padding: 0.75rem;
   border-radius: 0.75rem;
   text-decoration: none;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -315,8 +314,6 @@ border: red 2px solid;
 
 .slider-list {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* overflow: visible; */
   padding: 0;
   margin: 0;
   width: 100%;
@@ -333,21 +330,16 @@ border: red 2px solid;
   border-radius: 10px;
 }
 
-/* .slider-title {} */
-
 .slider-list,
 .slider-link {
   color: #131111;
-  /* padding: 0px 0px; */
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .slider-description {
   font-weight: 400;
-  font-size: 1rem;
-  /* margin-bottom: -10px; */
-  /* flex: 1; */
+  font-size: 0.8rem;
 }
 
 .button-right {
@@ -361,7 +353,6 @@ border: red 2px solid;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
   color: #131111;
   transition: 0.4s ease;
-  position: relative;
 }
 
 /* Designs Section */
@@ -371,18 +362,8 @@ border: red 2px solid;
   font-size: 30px;
   text-align: center;
   margin: 0;
-  /* margin-top: 175px; */
+  margin-bottom: -100px;
 }
-
-/* .designs-underline {
-  width: 270px;
-  height: 2px;
-  background-color: #ff8800;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 115px;
-} */
 
 /* Contact Section */
 
@@ -395,20 +376,9 @@ border: red 2px solid;
   font-size: 30px;
   text-align: center;
   margin: 0;
-  /* margin-top: 75px; */
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
-
-/* .contact-underline {
-  width: 270px;
-  height: 2px;
-  background-color: #ff8800;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 115px;
-} */
 
 /* Footer */
 
