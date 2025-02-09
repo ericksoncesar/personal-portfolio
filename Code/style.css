@@ -16,8 +16,6 @@ html body {
   left: 0;
   width: 100%;
   padding: 1rem 1.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -26,8 +24,12 @@ html body {
   box-sizing: border-box;
 }
 
-.ec-logo {
+.left-side {
   display: flex;
+  align-items: center;
+}
+
+.ec-logo {
   width: 25px;
   height: 25px;
   overflow: hidden;
@@ -47,7 +49,6 @@ html body {
   font-weight: bold;
   color: #131111;
   text-decoration: none;
-  margin-left: -68 rem;
 }
 
 nav a {
@@ -185,7 +186,7 @@ span {
 
 .social-icons a:hover {
   color: #ff8800;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* About Me Page */
@@ -253,7 +254,7 @@ span {
 .skill-icons i:hover,
 .skill-icons-2 i:hover {
   color: #ff8800;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* Projects Page */
