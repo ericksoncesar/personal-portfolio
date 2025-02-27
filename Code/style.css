@@ -65,20 +65,19 @@ nav a {
 
 nav a:hover {
   color: #ff8800;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #131111;
-  transition: color 0.3s ease;
   justify-content: flex-end;
   display: flex;
 }
 
 .nav-links a:hover {
   color: #ff8800;
-  transition: color 0.15s ease;
+  transition: color 0.3s ease;
   flex-grow: 1;
 }
 
@@ -151,7 +150,7 @@ span {
 }
 
 .profile-pic:hover {
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
 
 .contact-btn-container {
@@ -168,6 +167,10 @@ span {
   border: none;
   border-radius: 0.35rem;
   cursor: pointer;
+}
+
+.contact-btn:active {
+  transform: scale(0.95);
 }
 
 .social-icons {
@@ -356,25 +359,10 @@ span {
   transition: 0.4s ease;
 }
 
-/* Games Section */
-
-.games-section {
-  background-color: rgb(255, 255, 255);
-  padding-bottom: 3.5rem;
-}
-
-.games-heading {
-  color: #131111;
-  font-size: 30px;
-  text-align: center;
-  margin: 0;
-  margin-bottom: -5rem;
-}
-
 /* Designs Section */
 
 .designs-section {
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(255, 255, 255);
   padding-bottom: 3.5rem;
 }
 
@@ -389,9 +377,8 @@ span {
 /* Contact Section */
 
 .contact-section {
-  background-color: rgb(255, 255, 255);
-  padding-bottom: 3.5rem;
-  margin-bottom: 0.95rem;
+  background-color: rgb(243, 243, 243);
+  padding-bottom: 4.45rem;
 }
 
 .contact-heading {
@@ -413,7 +400,6 @@ span {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
   padding: 2rem;
-  position: relative;
 }
 
 .cnt-sections {
@@ -458,6 +444,10 @@ span {
   margin-bottom: 1.75rem;
 }
 
+.contact-btn2:active {
+  transform: scale(0.95);
+}
+
 /* Footer */
 
 footer {
@@ -465,7 +455,6 @@ footer {
   padding: 0 0.75rem;
   font-size: 0.85rem;
   display: flex;
-  border-top: 1px solid rgb(243, 243, 243);
   color: #131111;
 }
 
@@ -474,4 +463,77 @@ footer {
   font-size: 0.85rem;
   cursor: pointer;
   color: #131111;
+}
+
+.footer-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.privacy-popup {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.privacy-popup-content {
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  text-align: left;
+  position: relative;
+}
+
+.privacy-popup-content h1 {
+  margin-top: -8px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.privacy-popup-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.close-privacy-popup {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #131111;
+}
+
+.close-privacy-popup:hover {
+  color: #ff8800;
+  transition: color 0.3s ease;
+}
+
+.privacy-okay-btn {
+  background-color: #ff8800;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 10rem;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  margin-top: 2rem;
+}
+
+.privacy-okay-btn:active {
+  transform: scale(0.95);
 }

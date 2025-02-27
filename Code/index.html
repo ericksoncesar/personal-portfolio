@@ -25,17 +25,18 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="left-side">
         <div class="ec-logo-container">
           <div class="ec-logo">
-            <img src="/images/ec-logo.jpg" alt="Erickson Cesar Logo" />
+            <a href="#home">
+              <img src="/images/ec-logo.jpg" alt="Erickson Cesar Logo" />
+            </a>
           </div>
         </div>
-        <a href="index.html" class="name">Erickson Cesar</a>
+        <a href="#home" class="name">Erickson Cesar</a>
       </div>
 
       <!-- Desktop Navbar -->
@@ -44,7 +45,6 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#games">Games</a>
         <a href="#designs">Designs</a>
         <a href="#contact">Contact</a>
         <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
@@ -138,12 +138,14 @@
         <i class="fa-brands fa-node-js"></i>
         <i class="devicon-c-plain"></i>
         <i class="fa-solid fa-database"></i>
+        <i class="devicon-spring-original"></i>
       </div>
       <div class="skill-icons-2">
         <i class="devicon-r-plain"></i>
-        <i class="devicon-lua-plain"></i>
         <i class="devicon-swift-plain"></i>
         <i class="fa-brands fa-react"></i>
+        <i class="devicon-amazonwebservices-plain-wordmark"></i>
+        <i class="devicon-angular-plain"></i>
         <i class="fa-brands fa-github-alt"></i>
         <i class="devicon-figma-plain"></i>
         <i class="devicon-photoshop-plain"></i>
@@ -239,103 +241,6 @@
                 />
               </a>
               <p class="project-3">Project 4</p>
-              <h2 class="slider-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Consequatur excepturi quos aspernatur voluptatem.
-              </h2>
-              <button class="button-right">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Games Section -->
-
-    <section class="games-section" id="games">
-      <div class="games-heading">
-        <div class="games-underline"></div>
-        <h1>Games</h1>
-      </div>
-
-      <div class="container">
-        <div class="project-slider">
-          <ul class="slider-list">
-            <li class="slider-item">
-              <a
-                href="https://github.com/ericksoncesar/response-pal"
-                target="_blank"
-              >
-                <img
-                  src="https://52kards.com/wp-content/uploads/2015/11/1920x1080-black-solid-color-background.jpg"
-                  alt="Slider Image"
-                  class="slider-image"
-                />
-              </a>
-
-              <p class="project-2">Game 1</p>
-              <h2 class="slider-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Consequatur excepturi quos aspernatur voluptatem.
-              </h2>
-              <button class="button-right">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </li>
-            <li class="slider-item">
-              <a
-                href="https://github.com/ericksoncesar/response-pal"
-                target="_blank"
-              >
-                <img
-                  src="https://52kards.com/wp-content/uploads/2015/11/1920x1080-black-solid-color-background.jpg"
-                  alt="Slider Image"
-                  class="slider-image"
-                />
-              </a>
-              <p class="project-3">Game 2</p>
-              <h2 class="slider-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Consequatur excepturi quos aspernatur voluptatem.
-              </h2>
-              <button class="button-right">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </li>
-            <li class="slider-item">
-              <a
-                href="https://github.com/ericksoncesar/response-pal"
-                target="_blank"
-              >
-                <img
-                  src="https://52kards.com/wp-content/uploads/2015/11/1920x1080-black-solid-color-background.jpg"
-                  alt="Slider Image"
-                  class="slider-image"
-                />
-              </a>
-              <p class="response-pal">Game 3</p>
-              <h2 class="slider-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Consequatur excepturi quos aspernatur voluptatem.
-              </h2>
-              <button class="button-right">
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </li>
-            <li class="slider-item">
-              <a
-                href="https://github.com/ericksoncesar/response-pal"
-                target="_blank"
-              >
-                <img
-                  src="https://52kards.com/wp-content/uploads/2015/11/1920x1080-black-solid-color-background.jpg"
-                  alt="Slider Image"
-                  class="slider-image"
-                />
-              </a>
-              <p class="project-3">Game 4</p>
               <h2 class="slider-description">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Consequatur excepturi quos aspernatur voluptatem.
@@ -495,11 +400,33 @@
     </section>
 
     <!-- Footer -->
+
     <footer>
       <p>© 2025 Erickson Cesar. All Rights Reserved</p>
       <div class="footer-right">
-        <p>Privacy</p>
+        <button class="footer-btn">
+          <p>Privacy</p>
+        </button>
       </div>
     </footer>
+
+    <div id="privacy-popup-container" class="privacy-popup">
+      <div class="privacy-popup-content">
+        <span id="close-privacy-popup" class="close-privacy-popup"
+          >&times;</span
+        >
+        <h1>Privacy Policy</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptates, quod, quae, quos, quibusdam quia quas voluptate
+          necessitatibus doloribus quidem doloremque. Quisquam voluptates, quod,
+          quae, quos, quibusdam quia quas voluptate necessitatibus doloribus
+          quidem doloremque.
+        </p>
+        <button class="privacy-okay-btn">Okay, got it!</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
