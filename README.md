@@ -19,4 +19,4 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 ## Contact 📧
 
-Created by [Erickson Cesar](ericksoncesar.me) - feel free to reach out!!
+Created by [Erickson Cesar](https://ericksoncesar.me) - feel free to reach out!!
