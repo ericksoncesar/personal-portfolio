@@ -98,3 +98,83 @@ if (messageSentPopupContainer) {
     }
   });
 }
+
+// Contact Form API
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+    const messageDiv = document.getElementById("form-message");
+
+    const fullName = form.querySelector("#full-name").value.trim();
+    const email = form.querySelector("#email").value.trim();
+    const message = form.querySelector("#message").value.trim();
+
+    if (!fullName || !email || !message) {
+      messageDiv.textContent = "Please fill out all required fields.";
+      messageDiv.className = "form-message error";
+      messageDiv.style.display = "block";
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      messageDiv.textContent = "Please enter a valid email address.";
+      messageDiv.className = "form-message error";
+      messageDiv.style.display = "block";
+      return;
+    }
+
+    console.log("Contact form script loaded!");
+
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        console.log("Form submission intercepted!");
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        const fullName = form.querySelector("#full-name").value.trim();
+        const email = form.querySelector("#email").value.trim();
+        const message = form.querySelector("#message").value.trim();
+
+        if (!fullName || !email || !message) {
+          console.log("Please fill out all required fields.");
+          return;
+        }
+
+        if (!validateEmail(email)) {
+          console.log("Please enter a valid email address.");
+          return;
+        }
+
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              console.log("Form submitted successfully!");
+              form.reset();
+            } else {
+              console.log("Failed to send message. Please try again.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      });
+
+    function validateEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+  });

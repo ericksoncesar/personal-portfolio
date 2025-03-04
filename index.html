@@ -21,10 +21,6 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
     <link rel="icon" type="image/png" href="Images/favicon.ico" />
   </head>
   <body>
@@ -357,47 +353,56 @@
     <section class="contact-section" id="contact">
       <div class="contact-heading">
         <div class="contact-underline"></div>
-        <h1>Leave a Message</h1>
+        <h1>Contact</h1>
       </div>
 
-      <div class="contact-container">
-        <h1 class="cnt-text">Contact Me</h1>
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/xeoeydwj"
+        method="POST"
+      >
+        <div class="contact-container">
+          <h1 class="cnt-text">Contact Me</h1>
 
-        <div class="cnt-sections">
-          <label for="full-name">Full Name</label>
-          <input
-            type="text"
-            id="full-name"
-            name="full-name"
-            placeholder="Enter your full name"
-          />
+          <div class="cnt-sections">
+            <label for="full-name">Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
 
-          <label for="email">Email Address</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-          />
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
 
-          <label for="phone">Phone Number</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Enter your phone number"
-          />
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+            />
 
-          <label for="message">Your Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Type your message"
-          ></textarea>
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Type your message"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="contact-btn2">Send message</button>
         </div>
-
-        <button class="contact-btn2">Send message</button>
-      </div>
+      </form>
     </section>
 
     <!-- Privacy Popup -->
@@ -448,6 +453,7 @@
         </button>
       </div>
     </footer>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="script.js"></script>
   </body>
 </html>
