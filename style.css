@@ -396,7 +396,7 @@ span {
   align-items: center;
   background-color: rgb(255, 255, 255);
   width: 34rem;
-  height: 37.5rem;
+  height: 34rem;
   margin: 0 auto;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
@@ -411,6 +411,7 @@ span {
 
 .cnt-sections label {
   margin-bottom: 1rem;
+  padding-left: 0.75rem;
 }
 
 .cnt-sections input {
@@ -425,11 +426,11 @@ span {
 #message {
   width: 100%;
   padding: 0.75rem 0.75rem 10rem;
+  margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.75rem;
   box-sizing: border-box;
   resize: none;
-  margin-bottom: 1rem;
 }
 
 .contact-btn2 {
@@ -442,40 +443,10 @@ span {
   cursor: pointer;
   margin: 0 auto;
   display: block;
-  margin-bottom: 2rem;
 }
 
 .contact-btn2:active {
   transform: scale(0.95);
-}
-
-/* Footer */
-
-footer {
-  position: relative;
-  padding: 0 0.75rem;
-  font-size: 0.85rem;
-  display: flex;
-  color: #131111;
-}
-
-.footer-right {
-  margin-left: auto;
-  font-size: 0.85rem;
-  cursor: pointer;
-  color: #131111;
-}
-
-.footer-right,
-.footer-btn:hover {
-  color: #ff8800;
-  transition: color 0.3s ease;
-}
-
-.footer-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
 /* Privacy Popup */
@@ -624,4 +595,33 @@ footer {
   justify-content: center;
   text-align: center;
   display: flex;
+}
+
+/* Footer */
+
+footer {
+  position: relative;
+  padding: 0 0.75rem;
+  font-size: 0.85rem;
+  display: flex;
+  color: #131111;
+}
+
+.footer-right {
+  margin-left: auto;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #131111;
+}
+
+.footer-right,
+.footer-btn:hover {
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
 }

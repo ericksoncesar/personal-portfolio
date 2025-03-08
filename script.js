@@ -51,130 +51,103 @@ if (privacyPopupContainer) {
 
 // Message Sent Popup
 
-const messageButton = document.querySelector(".contact-btn2");
-const messageSentPopupContainer = document.getElementById(
-  "message-sent-popup-container"
-);
-const closeMessagePopup = document.getElementById("close-message-popup");
-const messageOkayButton = document.querySelector(".message-okay-btn");
+document.addEventListener("DOMContentLoaded", function () {
+  const messageSentPopupContainer = document.getElementById(
+    "message-sent-popup-container"
+  );
+  const closeMessagePopup = document.getElementById("close-message-popup");
+  const messageOkayButton = document.querySelector(".message-okay-btn");
 
-messageSentPopupContainer.style.display = "none";
-
-if (messageButton && messageSentPopupContainer) {
-  messageButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-
-    if (messageSentPopupContainer.style.display === "flex") {
-      messageSentPopupContainer.style.display = "none";
-    } else {
-      messageSentPopupContainer.style.display = "flex";
-    }
-  });
-}
-
-if (closeMessagePopup && messageSentPopupContainer) {
-  closeMessagePopup.addEventListener("click", (event) => {
-    event.stopPropagation();
+  if (messageSentPopupContainer) {
     messageSentPopupContainer.style.display = "none";
-  });
-}
+  }
 
-if (messageOkayButton && messageSentPopupContainer) {
-  messageOkayButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-    messageSentPopupContainer.style.display = "none";
-  });
-}
-
-if (messageSentPopupContainer) {
-  document.addEventListener("click", (event) => {
-    if (
-      messageSentPopupContainer.style.display === "flex" &&
-      !event.target.closest(".message-popup-content") &&
-      !event.target.closest("#close-message-popup") &&
-      !event.target.closest(".message-okay-btn")
-    ) {
+  if (closeMessagePopup && messageSentPopupContainer) {
+    closeMessagePopup.addEventListener("click", (event) => {
+      event.stopPropagation();
       messageSentPopupContainer.style.display = "none";
-    }
-  });
-}
+    });
+  }
 
-// Contact Form API
+  if (messageOkayButton && messageSentPopupContainer) {
+    messageOkayButton.addEventListener("click", (event) => {
+      event.stopPropagation();
+      messageSentPopupContainer.style.display = "none";
+    });
+  }
 
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
+  if (messageSentPopupContainer) {
+    document.addEventListener("click", (event) => {
+      if (
+        messageSentPopupContainer.style.display === "flex" &&
+        !event.target.closest(".message-popup-content") &&
+        !event.target.closest("#close-message-popup") &&
+        !event.target.closest(".message-okay-btn")
+      ) {
+        messageSentPopupContainer.style.display = "none";
+      }
+    });
+  }
 
-    const form = event.target;
-    const formData = new FormData(form);
-    const messageDiv = document.getElementById("form-message");
+  // Contact Form API
 
-    const fullName = form.querySelector("#full-name").value.trim();
-    const email = form.querySelector("#email").value.trim();
-    const message = form.querySelector("#message").value.trim();
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    if (!fullName || !email || !message) {
-      messageDiv.textContent = "Please fill out all required fields.";
-      messageDiv.className = "form-message error";
-      messageDiv.style.display = "block";
-      return;
-    }
+      const formData = new FormData(contactForm);
+      const messageDiv = document.getElementById("form-message");
 
-    if (!validateEmail(email)) {
-      messageDiv.textContent = "Please enter a valid email address.";
-      messageDiv.className = "form-message error";
-      messageDiv.style.display = "block";
-      return;
-    }
+      const fullName = contactForm.querySelector("#full-name").value.trim();
+      const email = contactForm.querySelector("#email").value.trim();
+      const message = contactForm.querySelector("#message").value.trim();
 
-    console.log("Contact form script loaded!");
+      if (!fullName || !email || !message) {
+        messageDiv.textContent = "Please fill out all required fields.";
+        messageDiv.className = "form-message error";
+        messageDiv.style.display = "block";
+        return;
+      }
 
-    document
-      .getElementById("contact-form")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
-        console.log("Form submission intercepted!");
+      if (!validateEmail(email)) {
+        messageDiv.textContent = "Please enter a valid email address.";
+        messageDiv.className = "form-message error";
+        messageDiv.style.display = "block";
+        return;
+      }
 
-        const form = event.target;
-        const formData = new FormData(form);
-
-        const fullName = form.querySelector("#full-name").value.trim();
-        const email = form.querySelector("#email").value.trim();
-        const message = form.querySelector("#message").value.trim();
-
-        if (!fullName || !email || !message) {
-          console.log("Please fill out all required fields.");
-          return;
-        }
-
-        if (!validateEmail(email)) {
-          console.log("Please enter a valid email address.");
-          return;
-        }
-
-        fetch(form.action, {
-          method: "POST",
-          body: formData,
-          headers: {
-            Accept: "application/json",
-          },
+      fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+        redirect: "manual",
+      })
+        .then((response) => {
+          if (response.ok || response.type === "opaqueredirect") {
+            messageSentPopupContainer.style.display = "flex";
+            contactForm.reset();
+            messageDiv.style.display = "none";
+          } else {
+            messageDiv.textContent =
+              "Failed to send message. Please try again.";
+            messageDiv.className = "form-message error";
+            messageDiv.style.display = "block";
+          }
         })
-          .then((response) => {
-            if (response.ok) {
-              console.log("Form submitted successfully!");
-              form.reset();
-            } else {
-              console.log("Failed to send message. Please try again.");
-            }
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
-      });
+        .catch((error) => {
+          console.error("Error:", error);
+          messageDiv.textContent = "An error occurred. Please try again.";
+          messageDiv.className = "form-message error";
+          messageDiv.style.display = "block";
+        });
+    });
+  }
 
-    function validateEmail(email) {
-      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return regex.test(email);
-    }
-  });
+  function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+});
